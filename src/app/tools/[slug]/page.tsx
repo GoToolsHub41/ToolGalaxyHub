@@ -31,21 +31,25 @@ import { MetaTagGeneratorTool } from '@/components/tools/seo/MetaTagGeneratorToo
 import { Base64FileEncoderTool } from '@/components/tools/file/Base64FileEncoderTool';
 
 // Map component names to actual components
-// 19 high-traffic tools implemented - remaining 96 tools follow these patterns
+// 25 high-traffic tools implemented - remaining 90 tools follow these patterns
 const toolComponents: Record<string, React.ComponentType<any>> = {
-  // Code Tools (5 implemented - 13 remaining)
+  // Code Tools (8 implemented - 10 remaining)
   JsonFormatterTool,
   JsonMinifierTool,
   UrlEncoderTool,
   ColorPickerTool,
   HtmlFormatterTool,
+  CssFormatterTool,
+  JsFormatterTool,
+  RegexTesterTool,
 
-  // Text Tools (5 implemented - 15 remaining)
+  // Text Tools (6 implemented - 14 remaining)
   WordCounterTool,
   CharacterCounterTool,
   CaseConverterTool,
   TextReverserTool,
   LoremIpsumTool,
+  TextToSpeechTool,
 
   // Security Tools (5 implemented - 9 remaining)
   PasswordGeneratorTool,
@@ -54,9 +58,11 @@ const toolComponents: Record<string, React.ComponentType<any>> = {
   Md5HashTool,
   Sha256HashTool,
 
-  // Image Tools (2 implemented - 16 remaining)
+  // Image Tools (4 implemented - 14 remaining)
   ImageResizerTool,
+  ImageCompressorTool,
   QrCodeGeneratorTool,
+  BarcodeGeneratorTool,
 
   // SEO Tools (1 implemented - 11 remaining)
   MetaTagGeneratorTool,
@@ -64,7 +70,7 @@ const toolComponents: Record<string, React.ComponentType<any>> = {
   // File Tools (1 implemented - 14 remaining)
   Base64FileEncoderTool,
 
-  // Remaining 96 tools will be added following the established patterns above
+  // Remaining 90 tools will be added following the established patterns above
 };
 
 // Generate static params for all tools (SSG)

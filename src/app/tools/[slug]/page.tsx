@@ -7,6 +7,8 @@ import { ToolPageLayout } from '@/components/tools/ToolPageLayout';
 import { JsonFormatterTool } from '@/components/tools/code/JsonFormatterTool';
 import { JsonMinifierTool } from '@/components/tools/code/JsonMinifierTool';
 import { UrlEncoderTool } from '@/components/tools/code/UrlEncoderTool';
+import { ColorPickerTool } from '@/components/tools/code/ColorPickerTool';
+import { HtmlFormatterTool } from '@/components/tools/code/HtmlFormatterTool';
 import { WordCounterTool } from '@/components/tools/text/WordCounterTool';
 import { CaseConverterTool } from '@/components/tools/text/CaseConverterTool';
 import { CharacterCounterTool } from '@/components/tools/text/CharacterCounterTool';
@@ -14,39 +16,49 @@ import { TextReverserTool } from '@/components/tools/text/TextReverserTool';
 import { LoremIpsumTool } from '@/components/tools/text/LoremIpsumTool';
 import { PasswordGeneratorTool } from '@/components/tools/security/PasswordGeneratorTool';
 import { Base64EncoderTool } from '@/components/tools/security/Base64EncoderTool';
+import { UuidGeneratorTool } from '@/components/tools/security/UuidGeneratorTool';
+import { Md5HashTool } from '@/components/tools/security/Md5HashTool';
+import { Sha256HashTool } from '@/components/tools/security/Sha256HashTool';
 import { ImageResizerTool } from '@/components/tools/image/ImageResizerTool';
+import { QrCodeGeneratorTool } from '@/components/tools/image/QrCodeGeneratorTool';
 import { MetaTagGeneratorTool } from '@/components/tools/seo/MetaTagGeneratorTool';
 import { Base64FileEncoderTool } from '@/components/tools/file/Base64FileEncoderTool';
 
 // Map component names to actual components
-// Remaining 102 tools will follow these same patterns and can be added incrementally
+// 19 high-traffic tools implemented - remaining 96 tools follow these patterns
 const toolComponents: Record<string, React.ComponentType<any>> = {
-  // Code Tools (3 implemented)
+  // Code Tools (5 implemented - 13 remaining)
   JsonFormatterTool,
   JsonMinifierTool,
   UrlEncoderTool,
+  ColorPickerTool,
+  HtmlFormatterTool,
 
-  // Text Tools (5 implemented)
+  // Text Tools (5 implemented - 15 remaining)
   WordCounterTool,
   CharacterCounterTool,
   CaseConverterTool,
   TextReverserTool,
   LoremIpsumTool,
 
-  // Security Tools (2 implemented)
+  // Security Tools (5 implemented - 9 remaining)
   PasswordGeneratorTool,
   Base64EncoderTool,
+  UuidGeneratorTool,
+  Md5HashTool,
+  Sha256HashTool,
 
-  // Image Tools (1 implemented)
+  // Image Tools (2 implemented - 16 remaining)
   ImageResizerTool,
+  QrCodeGeneratorTool,
 
-  // SEO Tools (1 implemented)
+  // SEO Tools (1 implemented - 11 remaining)
   MetaTagGeneratorTool,
 
-  // File Tools (1 implemented)
+  // File Tools (1 implemented - 14 remaining)
   Base64FileEncoderTool,
 
-  // Remaining 102 tools will be added following the established patterns above
+  // Remaining 96 tools will be added following the established patterns above
 };
 
 // Generate static params for all tools (SSG)

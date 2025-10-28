@@ -15,30 +15,38 @@ import { LoremIpsumTool } from '@/components/tools/text/LoremIpsumTool';
 import { PasswordGeneratorTool } from '@/components/tools/security/PasswordGeneratorTool';
 import { Base64EncoderTool } from '@/components/tools/security/Base64EncoderTool';
 import { ImageResizerTool } from '@/components/tools/image/ImageResizerTool';
+import { MetaTagGeneratorTool } from '@/components/tools/seo/MetaTagGeneratorTool';
+import { Base64FileEncoderTool } from '@/components/tools/file/Base64FileEncoderTool';
 
 // Map component names to actual components
-// This will be populated with all 115 tool components as they are implemented
+// Remaining 102 tools will follow these same patterns and can be added incrementally
 const toolComponents: Record<string, React.ComponentType<any>> = {
-  // Code Tools
+  // Code Tools (3 implemented)
   JsonFormatterTool,
   JsonMinifierTool,
   UrlEncoderTool,
 
-  // Text Tools
+  // Text Tools (5 implemented)
   WordCounterTool,
   CharacterCounterTool,
   CaseConverterTool,
   TextReverserTool,
   LoremIpsumTool,
 
-  // Security Tools
+  // Security Tools (2 implemented)
   PasswordGeneratorTool,
   Base64EncoderTool,
 
-  // Image Tools
+  // Image Tools (1 implemented)
   ImageResizerTool,
 
-  // More tool components will be added here as they are implemented
+  // SEO Tools (1 implemented)
+  MetaTagGeneratorTool,
+
+  // File Tools (1 implemented)
+  Base64FileEncoderTool,
+
+  // Remaining 102 tools will be added following the established patterns above
 };
 
 // Generate static params for all tools (SSG)

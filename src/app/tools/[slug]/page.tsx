@@ -9,6 +9,8 @@ import { JsonMinifierTool } from '@/components/tools/code/JsonMinifierTool';
 import { UrlEncoderTool } from '@/components/tools/code/UrlEncoderTool';
 import { WordCounterTool } from '@/components/tools/text/WordCounterTool';
 import { CaseConverterTool } from '@/components/tools/text/CaseConverterTool';
+import { PasswordGeneratorTool } from '@/components/tools/security/PasswordGeneratorTool';
+import { ImageResizerTool } from '@/components/tools/image/ImageResizerTool';
 
 // Map component names to actual components
 // This will be populated with all 115 tool components as they are implemented
@@ -21,6 +23,12 @@ const toolComponents: Record<string, React.ComponentType<any>> = {
   // Text Tools
   WordCounterTool,
   CaseConverterTool,
+
+  // Security Tools
+  PasswordGeneratorTool,
+
+  // Image Tools
+  ImageResizerTool,
 
   // More tool components will be added here as they are implemented
 };

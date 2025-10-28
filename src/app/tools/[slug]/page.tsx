@@ -9,7 +9,11 @@ import { JsonMinifierTool } from '@/components/tools/code/JsonMinifierTool';
 import { UrlEncoderTool } from '@/components/tools/code/UrlEncoderTool';
 import { WordCounterTool } from '@/components/tools/text/WordCounterTool';
 import { CaseConverterTool } from '@/components/tools/text/CaseConverterTool';
+import { CharacterCounterTool } from '@/components/tools/text/CharacterCounterTool';
+import { TextReverserTool } from '@/components/tools/text/TextReverserTool';
+import { LoremIpsumTool } from '@/components/tools/text/LoremIpsumTool';
 import { PasswordGeneratorTool } from '@/components/tools/security/PasswordGeneratorTool';
+import { Base64EncoderTool } from '@/components/tools/security/Base64EncoderTool';
 import { ImageResizerTool } from '@/components/tools/image/ImageResizerTool';
 
 // Map component names to actual components
@@ -22,10 +26,14 @@ const toolComponents: Record<string, React.ComponentType<any>> = {
 
   // Text Tools
   WordCounterTool,
+  CharacterCounterTool,
   CaseConverterTool,
+  TextReverserTool,
+  LoremIpsumTool,
 
   // Security Tools
   PasswordGeneratorTool,
+  Base64EncoderTool,
 
   // Image Tools
   ImageResizerTool,

@@ -3,12 +3,26 @@ import { Metadata } from 'next';
 import { getToolBySlug, allTools } from '@/lib/tools-data';
 import { ToolPageLayout } from '@/components/tools/ToolPageLayout';
 
-// This will be populated with all tool components as they are created
-// Phases 6-11 will add imports and mappings for all 115 tools
+// Import tool components
+import { JsonFormatterTool } from '@/components/tools/code/JsonFormatterTool';
+import { JsonMinifierTool } from '@/components/tools/code/JsonMinifierTool';
+import { UrlEncoderTool } from '@/components/tools/code/UrlEncoderTool';
+import { WordCounterTool } from '@/components/tools/text/WordCounterTool';
+import { CaseConverterTool } from '@/components/tools/text/CaseConverterTool';
+
+// Map component names to actual components
+// This will be populated with all 115 tool components as they are implemented
 const toolComponents: Record<string, React.ComponentType<any>> = {
-  // Tool components will be added here as they are implemented
-  // Example:
-  // JsonFormatterTool: dynamic(() => import('@/components/tools/code/JsonFormatterTool').then(m => m.JsonFormatterTool)),
+  // Code Tools
+  JsonFormatterTool,
+  JsonMinifierTool,
+  UrlEncoderTool,
+
+  // Text Tools
+  WordCounterTool,
+  CaseConverterTool,
+
+  // More tool components will be added here as they are implemented
 };
 
 // Generate static params for all tools (SSG)
